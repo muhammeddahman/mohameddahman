@@ -1,0 +1,559 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Experience Timeline</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+       .hover-section {
+		position: relative;
+	}
+	
+	.hover-image {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.hover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.hover-image img.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits within the container without being cropped */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-section:hover .hover-image img {
+    opacity: 0;
+}
+
+.hover-section:hover .hover-image img.hover {
+    opacity: 1;
+}
+
+.hover-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #2a2a2a; /* Updated to blend with the background */
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5C35;
+}
+
+.waiting-text {
+    font-size: 18px;
+    color: #ffffff; /* Updated to white for better readability */
+    margin-top: 10px;
+}
+
+.dots::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+#banner {
+    background: #2a2a2a; /* Background color to match the theme */
+    color: white; /* Text color for readability */
+    padding: 4em 0;
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Remove the cyan background and keep only the photo */
+#banner {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 6em 0 2em 0 ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0 !important;
+    cursor: default;
+    height: 60vh;
+    margin-bottom: -3.25em;
+    max-height: 32em;
+    min-height: 22em;
+    position: relative;
+    top: -3.25em;
+}
+
+#banner:after {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+}
+
+#banner .image {
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+#banner .image {
+    margin-bottom: 1em;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+#banner .major h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+#banner .content p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #FF5C35; /* Accent color for the quote */
+}
+    </style>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+			<!-- Banner -->
+			<!-- Note: The "style2" class below should match that of the header element. -->
+			<section id="banner" class="style2">
+				<div class="inner">
+					<span class="image">
+						<img src="images/IMG0046.jpg" alt="Image" />
+					</span>
+					<header class="major">
+						<h3>"Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity." </h3>
+					</header>
+					<div class="content">
+						<p> Aaron Swartz”</p>
+					</div>
+				</div>
+			</section>
+            </div>
+
+           <div id="wrapper">
+        <!-- Section: Timeline -->
+        <section class="py-5">
+            <div class="container">
+                <h1 class="text-center mb-5">My Professional Journey 🧑‍💼</h1>
+                <h3 class="text-center mb-5">"سبع صنايع والبخت ضايع 🤦‍♂️"</h3>
+                <ul class="timeline">
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/ISEF.jpeg" class="img-fluid" alt="Experience 2">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Regeneron ISEF 2025 Global Finalist</h5>
+                                <p class="text-muted mb-2 fw-bold">May 2025</p>
+                                <p class="text-muted">
+                                    <p>International Science and Engineering Fair (ISEF)</p>
+                                    ● Earned 1st Place in Software and 2nd Overall in Egypt (out of 1,300 participants).
+                                    <br>● Represented Egypt globally, presenting research on robotics and AI vulnerabilities.
+                                    <br>● Recognized for innovation, impact, and technical excellence in computer science research.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item right mb-5">
+                        <div class="row">
+                            <div class="col-md-4 order-md-2">
+                                <img src="images/UChicago-logo.jpg" class="img-fluid" alt="Experience 2">
+                            </div>
+                            <div class="col-md-8 order-md-1">
+                                <h5 class="fw-bold">Egypt Representative – Residential Scholar </h5>
+                                <p class="text-muted mb-2 fw-bold"> July 2025 </p>
+                                <p class="text-muted">
+                                    <p> University of Chicago – Emerging World Leaders Programr </p>
+                                    ● Analyzed 15 datasets using AI techniques like K-clustering and Latent Dirichlet Allocation (LDA), resulting in actionable insights that transformed the admissions process.
+                                    <br>● Developed an integrity check proposal to automate the flagging of duplicate applications using IP tracking, email analysis (Levenshtein Distance, N-gram Analysis, Jaccard Similarity), and geolocation verification, enhancing efficiency and accuracy.
+                                    <br>● Utilized SQL for data analysis to extract, process, and analyze large datasets, contributing to data-driven recommendations for improving the admissions process.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/pioneer.jpg" class="img-fluid" alt="Experience 3">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Researcher</h5>
+                                <p class=" mb-2 fw-bold">June 2025 – September 2025</p>
+                                <p class="text-muted">
+                                    <p>Pioneer Research Program – Pioneer Academics</p>
+                                    ● Authored a 19-page paper analyzing 45+ sources and cybersecurity case studies on robotics vulnerabilities.
+                                    <br>● Attended five advanced cybersecurity lectures while developing a robotics security framework addressing five major CVEs.
+                                    <br>● Received personalized academic mentorship and produced a publishable-level research paper in computer science.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item right mb-5">
+                        <div class="row">
+                            <div class="col-md-4 order-md-2">
+                                <img src="images/Ladder.jpeg" class="img-fluid" alt="Experience 4">
+                            </div>
+                            <div class="col-md-8 order-md-1">
+                                <h5 class="fw-bold">AI & Business Solutions Intern </h5>
+                                <p class="text-muted mb-2 fw-bold">December 2024 – February 2025</p>       
+                                    <p>Ladder Internships – Delicate Destructions</p>
+                                    ● Built an AI-powered dynamic pricing model achieving 96%+ accuracy using regression and clustering algorithms.
+                                    <br>● Analyzed 300+ market data points to optimize startup supply chains and reverse logistics.
+                                    <br>● Collaborated with the product team to develop scalable business strategies using predictive analytics.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/lumiere-education.webp" class="img-fluid" alt="Experience 5">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Lumiere Research Scholar</h5>
+                                <p class="text-muted mb-2 fw-bold"> June 2024 – October 2024</p>
+                                <p class="text-muted">
+                                    <p>Lumiere Education</p>
+                                    ● Conducted research on explainable AI (XAI) to adapt static models for evolving data environments.
+                                    <br>● Authored a 16-page research paper supported by 32+ scholarly sources under PhD mentorship.
+                                    <br>● Proposed an adaptive framework for real-time interpretability in machine learning systems.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item right mb-5">
+                        <div class="row">
+                            <div class="col-md-4 order-md-2">
+                                <img src="images/ebh.jpg" class="img-fluid" alt="Experience 6">
+                            </div>
+                            <div class="col-md-8 order-md-1">
+                                <h5 class="fw-bold">Research Program Director</h5>
+                                <p class="text-muted mb-2 fw-bold">June 2023 – Present</p>
+                                <p class="text-muted">
+                                    <p>Ebhath Research Institution || <a href="https://www.ebhath.org" target="_blank">www.ebhath.org</a></p>
+                                    ● Founded and directed a non-profit research initiative democratizing access to academic mentorship.
+                                    <br>● Developed Arabic and Swahili research courses reaching over 3,000 students across 14 countries.
+                                    <br>● Managed 20+ mentors and streamlined program operations to support underrepresented youth in STEM.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/ysjj.JPG" class="img-fluid" alt="Experience 7">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Senior Researcher – Mentor & Session Leader</h5>
+                                <p class="text-muted mb-2 fw-bold">August 2024 – October 2024</p>
+                                <p class="text-muted">
+                                    <p>Youth Science Journal Research Program (YSJ)</p>
+                                    ● Mentored six international students through their first research projects, from ideation to publication.
+                                    <br>● Led weekly workshops on academic writing, data analysis, and research presentation.
+                                    <br>● Strengthened global collaboration among students across four continents.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item right mb-5">
+                        <div class="row">
+                            <div class="col-md-4 order-md-2">
+                                <img src="images/salam.jpg" class="img-fluid" alt="Experience 8">
+                            </div>
+                            <div class="col-md-8 order-md-1">
+                                <h5 class="fw-bold">Camp Leader & Workshop Presenter</h5>
+                                <p class="text-muted mb-2 fw-bold">July 2013 – May 2024</p>
+                                <p class="text-muted">
+                                    <p>Egyptian Scouts Association – El Salam Scouts Group</p>
+                                    ● Represented Egypt in three international scouting camps while attending eleven national ones.
+                                    <br>● Led skill-building workshops for 150+ youth across nine governorates.
+                                    <br>● Promoted teamwork, service, and resilience through outdoor leadership training.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/atsnee.jpg" class="img-fluid" alt="Experience 9">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Club Founder & President</h5>
+                                <p class="text-muted mb-2 fw-bold">October 2023 – Present</p>
+                                <p class="text-muted">
+                                    <p>ATSNEE Chess Club</p>
+                                    ● Founded the school’s first official activity club, creating a platform for strategy and competition.
+                                    <br>● Organized monthly chess tournaments and trained 100+ students across multiple grades.
+                                    <br>● Fostered community spirit, problem-solving, and sportsmanship through mentorship.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item right mb-5">
+                        <div class="row">
+                            <div class="col-md-4 order-md-2">
+                                <img src="images/aspire-institute.jpg" class="img-fluid" alt="Experience 8">
+                            </div>
+                            <div class="col-md-8 order-md-1">
+                                <h5 class="fw-bold">Aspire Leaders Fellow</h5>
+                                <p class="text-muted mb-2 fw-bold">June 2025 – August 2024</p>
+                                <p class="text-muted">
+                                    <p>Aspire Leaders Program (founded at Harvard University)</p>
+                                    ● Selected as a fellow in a global leadership program for first-generation, low-income students.
+                                    <br>● Designed and implemented a community project improving educational access and equity.
+                                    <br>● Engaged in leadership seminars and global networking sessions with peers from 40+ countries.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/atsnee.jpg" class="img-fluid" alt="Experience 9">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Website Co-Founder – Content & Project Lead</h5>
+                                <p class="text-muted mb-2 fw-bold">October 2024 – December 2024</p>
+                                <p class="text-muted">
+                                    <p>ATSNEE School Website Project || <a href="https://www.atsnee.org" target="_blank">www.atsnee.org</a></p>
+                                    ● Co-founded and led the creation of the school’s first official website, enhancing transparency in admissions.
+                                    <br>● Coordinated a cross-functional team to develop intuitive navigation and accessibility features.
+                                    <br>● Increased applicant engagement and achieved over 4,500 site visits in the first month.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item right mb-5">
+                        <div class="row">
+                            <div class="col-md-4 order-md-2">
+                                <img src="images/alxx.jpg" class="img-fluid" alt="Experience 8">
+                            </div>
+                            <div class="col-md-8 order-md-1">
+                                <p class="text-muted mb-2 fw-bold">September 2023 – August 2024</p>
+                                <p class="text-muted">
+                                    <p>ALX Africa – Software Engineering Program</p>
+                                    ● Completed a rigorous 12-month international program in full-stack development and software engineering.
+                                    <br>● Gained proficiency in back-end and front-end technologies while building scalable applications.
+                                    <br>● Collaborated with peers and mentors across Africa, fostering teamwork and technical excellence.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                    <ul class="timeline-item left mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/cccc.jpg" class="img-fluid" alt="Experience 9">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="fw-bold">Advised Scholar</h5>
+                                <p class="text-muted mb-2 fw-bold">June 2024 – Present</p>
+                                <p class="text-muted">
+                                    <p>Competitive College Club (CCC) – EducationUSA</p>
+                                    ● Selected for a highly competitive advising program with an acceptance rate below 5%.
+                                    <br>● Received personalized guidance on U.S. college applications, essays, and scholarships.
+                                    <br>● Built cross-cultural leadership and communication skills through interactive community sessions.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="inner">
+                <section>
+                    <form method="post" action="#">
+                        <div class="form-field">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Your Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="form-field full">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="6"></textarea>
+                        </div>
+                        <div class="actions">
+                            <input type="submit" value="Send Message" class="primary" />
+                            <input type="reset" value="Clear" class="clear" />
+                        </div>
+                    </form>
+                </section>
+                <div class="contact-container">
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-envelope"></span>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <a href="mailto:mohamedyasserdahman@gmail.com">mohamedyasserdahman@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-phone"></span>
+                        <div class="contact-info">
+                            <h3>Phone</h3>
+                            <span>(+2) 01277879804 </span>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-home"></span>
+                        <div class="contact-info">
+                            <h3>Address</h3>
+                            <span>12 Mustafa Kamel St<br>Tanta, El-Gharbia<br>Aarab Republic of Egypt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+					<li><a href="https://github.com/muhammeddahman" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/muhammed-dahman-34868927a" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://medium.com/@muhammeddahmann" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+					<li><a href="https://www.instagram.com/muhammed_dahman" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+                <ul class="copyright">
+                    <li>&copy; 2025 Mohamed Dahman™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+		})();
+
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+			
+			// Get form data
+			const formData = new FormData(this);
+			
+			// Log form data for debugging
+			for (const [key, value] of formData.entries()) {
+				console.log(`${key}: ${value}`);
+			}
+			
+			// Send form data using EmailJS
+			emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+				.then(function() {
+					alert('Message sent successfully!');
+				}, function(error) {
+					console.log('FAILED...', error); // Log the error to the console for debugging
+					alert('Failed to send the message. Please try again.');
+				});
+		});
+	</script>
+
+</body>
+</html>

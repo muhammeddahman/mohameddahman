@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Who is Mohamed?!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>.hover-section {
+		position: relative;
+	}
+	
+	.hover-image {
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.hover-image img {
+		width: 100%;
+		transition: opacity 0.3s ease;
+	}
+	
+	.hover-image img.hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	
+	.hover-section:hover .hover-image img {
+		opacity: 0;
+	}
+	
+	.hover-section:hover .hover-image img.hover {
+		opacity: 1;
+	}
+	.hover-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hover-image {
+    flex: 1;
+}
+
+.hover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #2a2a2a; /* Updated to blend with the background */
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5C35;
+}
+
+.waiting-text {
+    font-size: 18px;
+    color: #ffffff; /* Updated to white for better readability */
+    margin-top: 10px;
+}
+
+.dots::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+#banner {
+    background: #2a2a2a; /* Background color to match the theme */
+    color: white; /* Text color for readability */
+    padding: 4em 0;
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Remove the cyan background and keep only the photo */
+#banner {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 6em 0 2em 0 ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0 !important;
+    cursor: default;
+    height: 60vh;
+    margin-bottom: -3.25em;
+    max-height: 32em;
+    min-height: 22em;
+    position: relative;
+    top: -3.25em;
+}
+
+#banner:after {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+}
+
+#banner .image {
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+#banner .image {
+    margin-bottom: 1em;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+#banner .major h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+#banner .content p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #FF5C35; /* Accent color for the quote */
+}
+</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			<!-- Banner -->
+			<!-- Note: The "style2" class below should match that of the header element. -->
+			<section id="banner" class="style2">
+				<div class="inner">
+					<span class="image">
+						<img src="images/IMG_3423.jpg" alt="Image" />
+					</span>
+					<header class="major">
+						<h3>“It’s a dangerous business, Frodo, going out your door. You step onto the road, and if you don’t keep your feet, there’s no knowing where you might be swept off to”</h3>
+					</header>
+					<div class="content">
+						<p>— Bilbo Baggins, The Lord of the Rings: The Fellowship of the Ring</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+
+<!-- Two -->
+<section id="two" class="spotlights">
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/family.jpg" alt="Home" />
+            <img src="images/ccc.jpg" alt="CCC 2024" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>Tanta, Egypt</h3>
+                </header>
+                <p>
+                    I was born and raised in Tanta, a city in the heart of Egypt's Delta where I spent most of my childhood. Growing up in a small apartment with my family, I learned early on the values of community impact and emotional engagement.
+                </p>
+                <p>
+                    I wasn’t surrounded by many resources, but I was surrounded by ideas. I would spend hours reading, playing chess with my grandfather, and teaching myself about computers from borrowed books and online videos. Every small discovery felt like a victory.
+                </p>
+                <p>
+                    Life in Tanta wasn’t always easy, balancing schoolwork, family responsibilities, and financial struggles shaped my sense of purpose. My parents divorced when I was young, and after losing my father, I found strength in helping my family and guiding my younger siblings.
+                </p>
+                <p>
+                    Those years in Tanta weren’t just my beginning; they were my foundation. They gave me the motivation to dream beyond limits and the courage to take the first step toward a life defined by learning and impact.
+                </p>
+        
+            </div>
+        </div>
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/photo_2025-03-03_16-44-55.jpg" alt="ISEF 2025" />
+            <img src="images/photo_2025-10-12_02-18-50.jpg" alt="School 2025" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>El-Dabaa', Egypt</h3>
+                </header>
+                <p>
+					My next chapter began when I joined the Advanced Applied School for Nuclear Energy in El Dabaa — one of Egypt’s most selective STEM boarding schools. Enrolling there marked the beginning of a new phase of self-development in my educational journey.
+				</p>
+				<p>
+					Majoring in Electronics and Nuclear Energy, I spent my high school years working on projects that connected science with real-world impact. Through various internships and competitions, I developed initiatives ranging from building automation systems to designing AI models that promote sustainability. Each project felt like a step closer to shaping Egypt’s future.
+				</p>
+				<p>
+					At first, living far from home was difficult — long nights of study and the pressure of competition often tested my resilience. But over time, El Dabaa became a second home. It’s where I founded clubs, mentored peers, and led initiatives that empowered hundreds of students to explore research.
+				</p>
+				<p>
+					My years there redefined what education meant to me. It wasn’t just about grades or experiments; it was about building something that could outlive me. The friendships I built, the lessons I learned, and the sense of purpose I discovered became the essence of who I am.
+				</p>
+            </div>
+        </div>
+    </section>
+    
+	<section class="hover-section">
+		<div class="hover-image">
+			<img src="images/Campus.jpg" alt="UChicago Campus" />
+			<img src="images/IMG_2798.jpg" alt="UChicago Freinds" class="hover" />
+		</div>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Chicago, United States</h3>
+				</header>
+				<p>
+					My next chapter begins at the University of Chicago, a place I once visited and promised myself I’d return to, carrying bigger dreams and deeper ambitions.
+				</p>
+				<p>
+					UChicago captured my heart as more than just a university; it represents the outcome of every late night spent coding, every research paper I completed, and every challenge I turned into growth. From my small room to the classrooms and labs of one of the world’s leading universities, UChicago marks the next step in my journey, and a new beginning.
+				</p>
+				<div class="loader-container">
+					<div class="loading-text">Loading<span class="dots"></span></div>
+					<div class="waiting-text">Wait for the stories and adventures of your <b>favorite global citizen!!</b></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+			<!-- Contact -->
+			<section id="contact">
+				<div class="inner">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="6"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" class="primary" /></li>
+								<li><input type="reset" value="Clear" /></li>
+							</ul>
+						</form>
+					</section>
+					<section class="split">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:mohamedyasserdahman@gmail.com">mohamedyasserdahman@gmail.com</a>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-phone"></span>
+								<h3>Phone</h3>
+								<span>(+2) 01277879804 </span>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-home"></span>
+								<h3>Address</h3>
+								<span>12 Mustafa Kamel St<br />
+									Tanta, El-Gharbia<br />
+									Aarab Republic of Egypt</span>
+							</div>
+						</section>
+					</section>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/muhammeddahman" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/muhammed-dahman-34868927a" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://medium.com/@muhammeddahmann" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+						<li><a href="https://www.instagram.com/muhammed_dahman" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2025 Mohamed Dahman™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+		})();
+
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+			
+			// Get form data
+			const formData = new FormData(this);
+			
+			// Log form data for debugging
+			for (const [key, value] of formData.entries()) {
+				console.log(`${key}: ${value}`);
+			}
+			
+			// Send form data using EmailJS
+			emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+				.then(function() {
+					alert('Message sent successfully!');
+				}, function(error) {
+					console.log('FAILED...', error); // Log the error to the console for debugging
+					alert('Failed to send the message. Please try again.');
+				});
+		});
+	</script>		
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Who is Mohamed?!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>.hover-section {
+		position: relative;
+	}
+	
+	.hover-image {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.hover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.hover-image img.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits within the container without being cropped */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-section:hover .hover-image img {
+    opacity: 0;
+}
+
+.hover-section:hover .hover-image img.hover {
+    opacity: 1;
+}
+
+.hover-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #2a2a2a; /* Updated to blend with the background */
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5C35;
+}
+
+.waiting-text {
+    font-size: 18px;
+    color: #ffffff; /* Updated to white for better readability */
+    margin-top: 10px;
+}
+
+.dots::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+#banner {
+    background: #2a2a2a; /* Background color to match the theme */
+    color: white; /* Text color for readability */
+    padding: 4em 0;
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Remove the cyan background and keep only the photo */
+#banner {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 6em 0 2em 0 ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0 !important;
+    cursor: default;
+    height: 60vh;
+    margin-bottom: -3.25em;
+    max-height: 32em;
+    min-height: 22em;
+    position: relative;
+    top: -3.25em;
+}
+
+#banner:after {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+}
+
+#banner .image {
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+#banner .image {
+    margin-bottom: 1em;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+#banner .major h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+#banner .content p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #FF5C35; /* Accent color for the quote */
+}
+</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			<!-- Banner -->
+			<!-- Note: The "style2" class below should match that of the header element. -->
+			<section id="banner" class="style2">
+				<div class="inner">
+					<span class="image">
+						<img src="images/IMG_4009.jpg" alt="Image" />
+					</span>
+					<header class="major">
+						<h3>"You think you know someone, and then they surprise you." </h3>
+					</header>
+					<div class="content">
+						<p> Alicia Nash — A Beautiful Mind (2001)”</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+
+<!-- Two -->
+<section id="two" class="spotlights">
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/IMG_5296.jpg" alt="Scouts" />
+			<img src="images/IMG_5297.jpg" alt="Scouts Hover" class="hover" />
+
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>Journeys Across Egypt, Lessons Beneath the Stars</h3>
+                </header>
+				<p>I joined the Scouts when I was eight. Each year since then brought a new camp, a new governorate, and new friends. From quiet rural farms to desert trails, every experience shaped how I see the world. I learned to adapt to the rhythms of different cultures, to pitch tents under the stars, and to find comfort in the unfamiliar.</p>
+				
+				<p>As I grew older, I took on more responsibility—presenting events, leading two camps, and organizing activities that connected people of all ages and backgrounds. Standing in front of a fire circle, guiding others through challenges I once faced myself, I began to understand what leadership really meant: listening, adapting, and creating space for others to shine.</p>
+				
+				<p>Twelve years later, the friends I made and the memories I carry still define who I am today. The Scouts taught me resilience, teamwork, and curiosity—the same traits that now drive me in research, problem-solving, and every new adventure that lies ahead.</p>
+        
+            </div>
+        </div>
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images\IMG_0414.jpg" alt="Cmp" />
+            <img src="images\IMG_5295.JPG" alt="San Francisco Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+				<h3>A passionate reader and captivating storyteller</h3>
+				</header>
+				<p>My love for reading began in grade 8, during the long COVID quarantine. Summer felt endless, and I wasn’t used to sitting idle. It all started with one book recommendation—but soon, I was searching for more stories, more voices. By the end of that summer, I had read ten books before entering grade 9, and a new habit was born.</p>
+				<p>Since then, reading has become a rhythm in my life—one book after another, month after month, until I reached nearly fifty over the past six years. It opened new worlds and connected me with people who shared that passion, especially in my school library and during the Arab Reading Challenge, which I joined for two years.</p>
+				<p>My reading journey has taken me from history to philosophy, and from Orwell and Dostoevsky to Kafka. But my favorite book remains The Postman of Neruda by Antonio Skármeta. Its simplicity reflects what I believe is the essence of literature, the ability to move hearts through clarity, sincerity, and emotion rather than complexity. </p>
+		
+			</div>
+		</div>
+	</section>
+					
+		
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/photo_2024-04-27_12-31-51.jpg" alt="Seoul" />
+            <img src="images/IMG000(3).jpg" alt="Seoul Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>From Childhood Passion to Lifelong Learner </h3>
+                </header>
+				<p>I began playing chess when I was young, but my first official competition came in February 2020, when I was 14. From that moment, chess became more than a hobby, it turned into a journey that took me across many of Egypt’s governorates, competing in tournaments and meeting players from every corner of the country. Over time, I earned gold and silver medals in multiple regional events and was later named the Best Rising Player under 16 in the Egyptian Premier League.</p>
+        
+                <p>Those years taught me patience, strategy, and resilience. Even at school, chess became part of my daily rhythm—matches with friends between classes or long evenings replaying famous games. Eventually, I founded the school’s first chess club, which continues to this day, hosting monthly tournaments and teaching sessions that bring together students who share the same quiet passion I discovered years ago.</p>
+        
+            </div>
+        </div>
+    </section>
+
+</section>
+			<!-- Contact -->
+			<section id="contact">
+				<div class="inner">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="6"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" class="primary" /></li>
+								<li><input type="reset" value="Clear" /></li>
+							</ul>
+						</form>
+					</section>
+					<section class="split">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:mohamedyasserdahman@gmail.com">mohamedyasserdahman@gmail.com</a>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-phone"></span>
+								<h3>Phone</h3>
+								<span>(+2) 01277879804 </span>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-home"></span>
+								<h3>Address</h3>
+								<span>12 Mustafa Kamel St<br />
+									Tanta, El-Gharbia<br />
+									Aarab Republic of Egypt</span>
+							</div>
+						</section>
+					</section>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/muhammeddahman" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/muhammed-dahman-34868927a" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://medium.com/@muhammeddahmann" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+						<li><a href="https://www.instagram.com/muhammed_dahman" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2025 Mohamed Dahman™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+		})();
+
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+			
+			// Get form data
+			const formData = new FormData(this);
+			
+			// Log form data for debugging
+			for (const [key, value] of formData.entries()) {
+				console.log(`${key}: ${value}`);
+			}
+			
+			// Send form data using EmailJS
+			emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+				.then(function() {
+					alert('Message sent successfully!');
+				}, function(error) {
+					console.log('FAILED...', error); // Log the error to the console for debugging
+					alert('Failed to send the message. Please try again.');
+				});
+		});
+	</script>		
+</body>
+</html>
