@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting to Homepage...</title>
+    <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
     <script>
-        // Automatically redirect to homepage.html after page loads
-        window.location.href = "homepage.html";
+        // Redirect to homepage once, no loop
+        window.location.replace("homepage.html");
     </script>
 </head>
 <body style="background: linear-gradient(90deg, rgba(20,147,220,1) 0%, rgba(130,88,216,1) 100%); color: white; text-align: center; padding-top: 20%;">
     <h2>Redirecting to Muhammed Dahman’s Homepage...</h2>
-    <p>If the page doesn’t load automatically, <a href="homepage.html" style="color: #fff; text-decoration: underline;">click here</a>.</p>
+    <p>If this doesn’t happen automatically, <a href="homepage.html" style="color:white; text-decoration:underline;">click here</a>.</p>
 </body>
 </html>
